@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Position</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    section {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      background: linear-gradient(90deg,
+          rgba(255, 0, 0, 0.2),
+          rgba(0, 0, 255, 0.2))
+    }
+
+    video {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    h1 {
+      color: white;
+      position: relative;
+      text-align: center;
+      margin-top: 50vh;
+      text-shadow: 0 1px 4px black;
+    }
+
+    p {
+      padding: 0 1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="video">
+    <h1>Lorem Ipsum</h1>
+    <video autoplay loop muted>
+      <source src="https://pierpaolo-rasicci.github.io/animazione/movies/walking.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  <article>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sequi quisquam ducimus accusantium aut omnis corrupti
+      aliquam dicta corporis, alias atque natus recusandae soluta eveniet rem iste nesciunt quidem id?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto odit et veniam quia eum nulla delectus, voluptate
+      aperiam non ea, itaque laudantium consequuntur voluptates tenetur modi? Veritatis dolores eius labore.</p>
+    <p><button id="play">Pausa</button></p>
+  </article>
+
+  <script>
+    // assegna l'elemento "video" ad una variabile
+    var video = document.querySelector("video");
+    // assegna il bottone con id="play" ad una variabile
+    var play = document.querySelector("#play");
+
+    play.onclick = function () {
+      // se il video è in pausa...
+      if (video.paused) {
+        // riproduci il video
+        video.play();
+        // rinomina il bottone
+        play.innerHTML = "Pausa";
+        // altrimenti
+      } else {
+        // metti in pausa il video
+        video.pause();
+        // rinomina il bottone
+        play.innerHTML = "Riproduci";
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
