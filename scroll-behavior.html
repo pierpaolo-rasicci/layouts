@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Scroll Behavior</title>
+  <style>
+    :root {
+      --ptop: 20vh;
+    }
+
+    html,
+    body {
+      margin: 0;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      height: 100vh;
+      perspective: 1px;
+      transform-style: preserve-3d;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .parallax-wrapper {
+      width: 100vw;
+      height: 100vh;
+      padding-top: var(--ptop);
+      box-sizing: border-box;
+      transform-style: preserve-3d;
+      z-index: -1;
+    }
+
+    .parallax-wrapper::before {
+      content: "";
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      position: absolute;
+      transform: translateZ(-1px) scale(2);
+    }
+
+    .parallax-wrapper:nth-child(odd)::before {
+      background-image: url("http://placekitten.com/g/1200/300");
+      background-size: cover;
+    }
+
+    .parallax-wrapper:nth-child(even)::before {
+      background-image: url("http://placekitten.com/g/1200/600");
+      background-size: cover;
+    }
+
+    .regular-wrapper {
+      height: 100vh;
+      padding-top: var(--ptop);
+      background-image: url("http://placekitten.com/g/1200/300");
+      background-size: cover;
+      position: relative;
+    }
+
+    .content {
+      margin: 0 auto;
+      padding: 1em;
+      width: 50%;
+      background: rgba(222, 222, 222, 0.75);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parallax-wrapper">
+    <div class="content">
+      <p><span id="lorem">Lorem</span> ipsum dolor, sit amet consectetur adipisicing elit. Quis sequi maiores sed
+        blanditiis eum, debitis itaque neque dolor esse numquam, doloremque tenetur. Rem officiis sunt odit. Cumque
+        nesciunt beatae quis.
+      </p>
+      <a href="#ipsum">scendi</a>
+    </div>
+  </div>
+
+  <div class="parallax-wrapper">
+    <div class="content">
+      <p>Lorem <span id="ipsum">ipsum</span> dolor, sit amet consectetur adipisicing elit. Quis sequi maiores sed
+        blanditiis eum, debitis itaque neque dolor esse numquam, doloremque tenetur. Rem officiis sunt odit. Cumque
+        nesciunt beatae quis.
+      </p>
+      <a href="#lorem">sali</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

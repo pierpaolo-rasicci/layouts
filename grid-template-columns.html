@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Grid Template Columns</title>
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    header,
+    footer {
+      background-color: steelblue;
+      grid-column: span 3;
+    }
+
+    nav,
+    aside {
+      background-color: lightsteelblue;
+    }
+
+    p {
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, sit necessitatibus unde numquam odio repudiandae
+      corporis possimus. Dolorum laboriosam reiciendis est, perspiciatis voluptatem, maxime, tenetur nisi cumque
+      cupiditate dolorem maiores.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li>foo</li>
+      <li>bar</li>
+      <li>baz</li>
+    </ul>
+  </nav>
+
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente placeat voluptatibus dolorem ab ratione,
+      tempora nihil suscipit dolores nam ipsam deserunt quos nemo magnam esse repellendus eum? Facilis, amet similique.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores soluta, praesentium maiores culpa atque saepe
+      dolore incidunt, esse nostrum asperiores necessitatibus. Magnam, iusto explicabo. Facere voluptatem aperiam quis
+      qui vitae!</p>
+  </main>
+
+  <aside>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui at quo, soluta delectus optio sapiente ducimus vel
+      molestiae beatae eveniet, autem voluptas sunt? Eligendi eum perspiciatis dolores nihil recusandae enim?</p>
+  </aside>
+
+  <footer>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus distinctio dolorum in voluptatibus itaque harum
+      sapiente voluptatem dolor eos accusamus? Sunt reprehenderit, vero veniam iste quia fugit deleniti possimus
+      laboriosam.</p>
+  </footer>
+
+</body>
+
+</html>

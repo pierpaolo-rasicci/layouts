@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Flex Grow</title>
+  <style>
+    body {
+      /* Flex */
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    header,
+    footer {
+      flex-basis: 100%;
+      background-color: steelblue;
+    }
+
+    nav {
+      flex-grow: 1;
+      background-color: lightsteelblue;
+    }
+
+    aside {
+      flex-grow: 1;
+      flex-basis: 300px;
+      background-color: lightsteelblue;
+    }
+
+    main {
+      flex-grow: 2;
+      /* Grid */
+      display: grid;
+      grid-column: 2/-2;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, sit necessitatibus unde numquam odio repudiandae
+      corporis possimus. Dolorum laboriosam reiciendis est, perspiciatis voluptatem, maxime, tenetur nisi cumque
+      cupiditate dolorem maiores.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li>foo</li>
+      <li>bar</li>
+      <li>baz</li>
+    </ul>
+  </nav>
+
+  <main>
+    <figure>
+      <img src="http://placekitten.com/g/600" alt="Lorem Ipsum" width="600" height="600" />
+      <figcaption>Lorem Ipsum</figcaption>
+    </figure>
+    <figure>
+      <img src="http://placekitten.com/g/600" alt="Lorem Ipsum" width="600" height="600" />
+      <figcaption>Lorem Ipsum</figcaption>
+    </figure>
+    <figure>
+      <img src="http://placekitten.com/g/600" alt="Lorem Ipsum" width="600" height="600" />
+      <figcaption>Lorem Ipsum</figcaption>
+    </figure>
+  </main>
+
+  <aside>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsa tempora nemo delectus quo saepe, ducimus
+      repudiandae tenetur necessitatibus eligendi officia odit minus fuga quasi consequuntur amet quidem laborum aut!
+    </p>
+  </aside>
+
+  <footer>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dicta expedita nihil illum sequi. Accusamus
+      natus illo quasi quis! Nam vero eveniet quod totam officiis magni, facilis tenetur laudantium quam.</p>
+  </footer>
+
+</body>
+
+</html>

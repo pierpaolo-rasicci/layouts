@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Justify Content</title>
+  <style>
+    nav {
+      background-color: steelblue;
+    }
+
+    h1 {
+      color: white;
+      margin: 0;
+      padding: 1rem;
+      line-height: 1rem;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      border-bottom: 1px solid lightsteelblue;
+    }
+
+    a {
+      display: inherit;
+      text-decoration: none;
+      color: lightsteelblue;
+      padding: 1rem;
+      line-height: 1rem;
+    }
+
+    a:hover {
+      color: white;
+      background-color: lightsteelblue;
+    }
+
+    a::first-letter {
+      text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 360px) {
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        display: inline-block;
+        border-bottom: none;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1 id="foobar">Foobar</h1>
+    <ul>
+      <li>
+        <a href="#foo">foo</a>
+      </li>
+      <li>
+        <a href="#bar">bar</a>
+      </li>
+      <li>
+        <a href="#baz">baz</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore libero officia, molestiae beatae deleniti vel quis maiores cumque adipisci rem excepturi possimus repudiandae, ducimus asperiores nam? Eveniet, ullam nobis. Totam!</p>
+  </main>
+</body>
+
+</html>
